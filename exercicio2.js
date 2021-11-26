@@ -67,13 +67,17 @@ function updateImg() {
 botaoAnteriorEl.addEventListener('click', () => {
   if (imgIndex > 0) {
     imgIndex--;
+  } else {
+    imgIndex = imagens.length - 1;
   }
   updateImg();
 });
 
 botaoProximoEl.addEventListener('click', () => {
-  if (imgIndex < imagens.length) {
+  if (imgIndex < imagens.length - 1) {
     imgIndex++;
+  } else {
+    imgIndex = 0;
   }
   updateImg();
 });
